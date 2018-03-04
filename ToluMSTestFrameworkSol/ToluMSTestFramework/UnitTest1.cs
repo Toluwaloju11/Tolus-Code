@@ -6,12 +6,12 @@ namespace ToluMSTestFramework
     [TestClass]
     public class UnitTest1 
     {
-       // [TestMethod]
+        [TestMethod]
         public void MyUnitTestone()
         {
             Console.WriteLine("First test");
         }
-      // [TestMethod]
+       [TestMethod]
         public void MyUnitTesttwo()
         {
             Console.WriteLine("Second test");

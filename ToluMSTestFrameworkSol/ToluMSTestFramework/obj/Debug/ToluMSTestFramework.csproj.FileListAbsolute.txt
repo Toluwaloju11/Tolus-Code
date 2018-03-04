@@ -1,0 +1,7 @@
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\ToluMSTestFramework.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\ToluMSTestFramework.pdb
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.pdb
