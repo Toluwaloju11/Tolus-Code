@@ -1,0 +1,6 @@
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\bin\Debug\Csharpbasics.exe.config
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\bin\Debug\Csharpbasics.exe
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\bin\Debug\Csharpbasics.pdb
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\obj\Debug\Csharpbasics.exe
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\obj\Debug\Csharpbasics.pdb
+C:\Users\Tester\Documents\Visual Studio 2015\Projects\Csharpbasics\Csharpbasics\obj\Debug\Csharpbasics.csprojResolveAssemblyReference.cache
