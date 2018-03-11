@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 namespace Csharpbasics{
    public abstract class AbstractionKnowledge
     {/*
-    * 1. This is a special type of class which is only used for inheritance inheritance 
-    * 2. An object of an Abstract class cant be created
+    * 1. This is a special type of class which is only used for inheritance 
+    * 2. An object of an Abstract class CANNOT be created
     * 3. An abstract class can have Abstract methods
     * 4. Abstract Methods are those mothods whose implementation is defined my the derived class
-    * 5. A derived class can only implement from one class    */
+    * 5. A derived class can only implement from one class */
        private int _numberone;
        private int _numbertwo;
        protected int numbersadded = 0;

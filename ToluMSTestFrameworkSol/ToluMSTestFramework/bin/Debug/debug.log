@@ -1,0 +1,17 @@
+[0311/161232.685:ERROR:process_reader_win.cc(182)] ResumeThread: The parameter is incorrect. (0x57)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.687:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0311/161232.688:ERROR:exception_snapshot_win.cc(88)] thread ID 7700 not found in process
+[0311/161232.688:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
