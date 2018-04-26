@@ -15,10 +15,11 @@ namespace ToluMSTestFramework
         {
           IWebDriver driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://uk.yahoo.com/?p=us");
+            driver.Navigate().GoToUrl("https://uk.yahoo.com/?p=us");            
             driver.Quit();
-            Thread.Sleep(5000);
+            Thread.Sleep(5000);            
             
         }
+        
     }
 }
