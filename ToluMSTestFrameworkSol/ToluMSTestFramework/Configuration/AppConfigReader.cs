@@ -31,5 +31,10 @@ namespace ToluMSTestFramework.Configuration
        {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Website);
         }
+
+        public string GetGroceries()
+        {
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.Groceries);
+        }
     }
 }

@@ -17,20 +17,41 @@ namespace ToluMSTestFramework.BaseClasses
     [TestClass]
     public class Baseclass
     {
-        private static IWebDriver GetFirefoxBrowser()
+        private static ChromeOptions GetChromeOptions()
         {
-            IWebDriver driver = new FirefoxDriver();
-            return driver;
+            var cOptions = new ChromeOptions();
+            cOptions.AddArgument("start-maximized");
+            return cOptions;
+        }
+
+        private static InternetExplorerOptions GetIEOptions()
+        {
+            var ieOptions = new InternetExplorerOptions();
+            ieOptions.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+            ieOptions.EnsureCleanSession = true;
+            return ieOptions;
+        }
+
+        private static FirefoxProfile GetFirefoxOption()
+        {
+            var FProfile = new FirefoxProfile();
+            FirefoxProfileManager fxManager = new FirefoxProfileManager();
+            FProfile = fxManager.GetProfile("default");
+            return FProfile;
         }
         private static IWebDriver GetChromeBrowser()
         {
-            IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(GetChromeOptions());
             return driver;
         }
-
+        private static IWebDriver GetFirefoxBrowser()
+        {
+            IWebDriver driver = new FirefoxDriver(GetFirefoxOption());
+            return driver;
+        }
         private static IWebDriver GetIEBrowser()
         {
-            IWebDriver driver = new InternetExplorerDriver();
+            IWebDriver driver = new InternetExplorerDriver(GetIEOptions());
             return driver;
         }
         [AssemblyInitialize]
@@ -59,5 +80,12 @@ namespace ToluMSTestFramework.BaseClasses
             }
         }
 
+        [AssemblyCleanup]
+        public static void Teardown()
+        {
+            if (ObjectRepository.driver ==null)return;
+            ObjectRepository.driver.Close();
+            ObjectRepository.driver.Quit();
+        }
     }
 }

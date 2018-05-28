@@ -7,3 +7,4 @@ C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramew
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.Support.xml
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.dll
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.pdb
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
