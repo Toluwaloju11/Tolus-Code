@@ -17,9 +17,11 @@ namespace ToluMSTestFramework.TestScripts.TestLinkClick
         public void ClickOnLink()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetWebsite());
-            IWebElement clicklink =
-             ObjectRepository.driver.FindElement(By.LinkText("Login"));
-            clicklink.Click();
+            
+            //This is to  help if there are more than 1 attribute with the same value
+            //Check LinkHelper and GenericClass helper class
+
+            LinkHelper.ClickLink(By.LinkText("Login"));
         }
        
     }

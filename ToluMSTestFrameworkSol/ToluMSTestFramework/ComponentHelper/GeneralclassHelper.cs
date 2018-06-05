@@ -14,7 +14,16 @@ namespace ToluMSTestFramework.ComponentHelper
     {
        public static bool IsElementPresent(By locator)
        {
-           return ObjectRepository.driver.FindElements(locator).Count == 1;
+           try
+           {
+                return ObjectRepository.driver.FindElements(locator).Count == 1;
+
+            }
+            catch (Exception)
+           {
+               
+               return false;
+           }
        }
 
        public static IWebElement getElement(By locator)
@@ -23,7 +32,6 @@ namespace ToluMSTestFramework.ComponentHelper
            {
                return ObjectRepository.driver.FindElement(locator);
            }
-           else
            {
                throw new NoSuchElementException("Element is not present" + locator);
            }

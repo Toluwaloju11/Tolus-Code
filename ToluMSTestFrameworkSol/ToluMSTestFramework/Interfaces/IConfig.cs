@@ -14,5 +14,7 @@ namespace ToluMSTestFramework.Interfaces
         string GetPassword();
         string GetWebsite();
         string GetGroceries();
+        string GetEmail();
+        string GetDemowebsite();
     }
 }
