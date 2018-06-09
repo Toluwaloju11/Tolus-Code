@@ -25,7 +25,6 @@ namespace ToluMSTestFramework.TestScripts.PageNavigation
         public void OpenGroceriesPage()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGroceries());
-            
             Console.WriteLine(WindowHelper.GetPageTitle());
 
         }

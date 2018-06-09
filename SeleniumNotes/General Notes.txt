@@ -1,0 +1,32 @@
+Questions for ANdre
+when i put the code in a try Catch block, and there is more than 1 unfamiliar element, it only shows the first one in the output
+
+GIT
+git add .
+git commit -m "" 
+git push
+Configuration classes
+1. AppConfig
+2. AppConfigKeys
+3. Iconfig
+4. AppConfigReader
+
+
+   private static IWebElement _element;
+
+        public static void ClickCheckBox(By locator)
+        {
+           _element = GeneralclassHelper.getElement(locator);
+            _element.Click();
+        }
+
+        public static bool IsCheckboxSelected(By locator)
+        {
+            _element = GeneralclassHelper.getElement(locator);
+           string CheckBoxstatus = _element.GetAttribute("agree");
+            if (CheckBoxstatus != null)
+                return CheckBoxstatus.Equals("true") ||CheckBoxstatus.Equals("checked");
+            return false;
+            
+
+        }

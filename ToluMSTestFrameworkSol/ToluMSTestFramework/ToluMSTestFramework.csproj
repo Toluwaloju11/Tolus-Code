@@ -65,9 +65,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BaseClasses\Baseclass.cs" />
+    <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
     <Compile Include="ComponentHelper\GeneralclassHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
+    <Compile Include="ComponentHelper\MenuButtonHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
+    <Compile Include="ComponentHelper\RadioButtonHelper.cs" />
     <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
@@ -77,7 +80,10 @@
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="TestScripts\CheckBox\TestCheckBox.cs" />
+    <Compile Include="TestScripts\MenuButton\SelectMenuButton.cs" />
     <Compile Include="TestScripts\PageNavigation\TestNavigationPage.cs" />
+    <Compile Include="TestScripts\RadioButton\TestRadioButton.cs" />
     <Compile Include="TestScripts\TestLinkClick\TestLink.cs" />
     <Compile Include="TestScripts\TextBoxTest\TestTextBox.cs" />
     <Compile Include="TestScripts\Webelements\ElementsTest.cs" />

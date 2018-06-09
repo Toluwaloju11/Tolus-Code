@@ -16,8 +16,8 @@ namespace ToluMSTestFramework.Configuration
            var browser = ConfigurationManager.AppSettings.Get(AppConfigKeys.Browser);
            return (BrowserType) Enum.Parse(typeof (BrowserType), browser);
        }
-
-       public string GetUsername()
+       
+        public string GetUsername()
        {
            return ConfigurationManager.AppSettings.Get(AppConfigKeys.Username);
        }
@@ -31,9 +31,14 @@ namespace ToluMSTestFramework.Configuration
        {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Website);
         }
-        public string GetDemowebsite()
+        public string GetDemoRegister()
         {
-            return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoWebsite);
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoRegister);
+        }
+
+        public string GetDemoHome()
+        {
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoHome);
         }
 
         public string GetGroceries()

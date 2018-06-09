@@ -17,7 +17,7 @@ namespace ToluMSTestFramework.TestScripts.TextBoxTest
         [TestMethod, TestCategory("Basic Code")]
         public void TextBox()
         {
-            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemowebsite());
+            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoRegister());
             LinkHelper.ClickLink(By.Id("input-email"));
             //IWebElement EmaiBoxField = ObjectRepository.driver.FindElement(By.Name("email"));
             //EmaiBoxField.Clear();
