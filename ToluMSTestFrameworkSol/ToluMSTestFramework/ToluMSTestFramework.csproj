@@ -75,26 +75,27 @@
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
-    <Compile Include="Constructor.cs" />
+    <Compile Include="Z Randomscript\Constructor.cs" />
     <Compile Include="CustomException\UnknownBrowser.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
     <Compile Include="TestScripts\CheckBox\TestCheckBox.cs" />
+    <Compile Include="TestScripts\DropDownMenu\TestDropdownMenu.cs" />
     <Compile Include="TestScripts\MenuButton\SelectMenuButton.cs" />
     <Compile Include="TestScripts\PageNavigation\TestNavigationPage.cs" />
     <Compile Include="TestScripts\RadioButton\TestRadioButton.cs" />
+    <Compile Include="TestScripts\Screenshots\TakeScreenShots.cs" />
     <Compile Include="TestScripts\TestLinkClick\TestLink.cs" />
     <Compile Include="TestScripts\TextBoxTest\TestTextBox.cs" />
     <Compile Include="TestScripts\Webelements\ElementsTest.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Z Randomscript\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ConfigTest.cs" />
+    <Compile Include="Z Randomscript\ConfigTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExcelReader\" />
     <Folder Include="PageObject\" />
-    <Folder Include="Z Randomscript\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

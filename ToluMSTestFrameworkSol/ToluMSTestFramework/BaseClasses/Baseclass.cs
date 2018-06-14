@@ -17,6 +17,11 @@ namespace ToluMSTestFramework.BaseClasses
     [TestClass]
     public class Baseclass
     {
+        private static IWebDriver GetChromeBrowser()
+        {
+            IWebDriver driver = new ChromeDriver(GetChromeOptions());
+            return driver;
+        }
         private static ChromeOptions GetChromeOptions()
         {
             var cOptions = new ChromeOptions();
@@ -24,6 +29,18 @@ namespace ToluMSTestFramework.BaseClasses
             return cOptions;
         }
 
+        private static ChromeOptions getMoreChromeOptions()
+        {
+            var moreCOption = new ChromeOptions();
+            moreCOption.AddArgument("--headless");
+            return moreCOption;
+        }
+        private static IWebDriver GetChromeBrowserExtra()
+        {
+            IWebDriver driver = new ChromeDriver(getMoreChromeOptions());
+            return driver;
+        }
+        
         private static InternetExplorerOptions GetIEOptions()
         {
             var ieOptions = new InternetExplorerOptions();
@@ -39,11 +56,7 @@ namespace ToluMSTestFramework.BaseClasses
             FProfile = fxManager.GetProfile("default");
             return FProfile;
         }
-        private static IWebDriver GetChromeBrowser()
-        {
-            IWebDriver driver = new ChromeDriver(GetChromeOptions());
-            return driver;
-        }
+        
         private static IWebDriver GetFirefoxBrowser()
         {
             IWebDriver driver = new FirefoxDriver(GetFirefoxOption());
@@ -68,7 +81,9 @@ namespace ToluMSTestFramework.BaseClasses
                 case BrowserType.Chrome:
                     ObjectRepository.driver = GetChromeBrowser();
                     break;
-
+                case BrowserType.ChromeHeadless:
+                    ObjectRepository.driver = GetChromeBrowserExtra();
+                    break;
                 case BrowserType.IExplorer:
                     ObjectRepository.driver = GetIEBrowser();
                     break;

@@ -10,6 +10,7 @@ namespace ToluMSTestFramework.Configuration
     {
         Firefox,
         Chrome,
+        ChromeHeadless,
         IExplorer
     }
 }

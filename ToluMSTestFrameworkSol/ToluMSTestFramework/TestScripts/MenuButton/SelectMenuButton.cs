@@ -13,7 +13,7 @@ namespace ToluMSTestFramework.TestScripts.MenuButton
     [TestClass]
     public class SelectMenuButton
     {
-        [TestMethod, TestCategory("SELECT BUTTON")]
+        [TestMethod, TestCategory("SELECTBUTTON")]
         public void HandleButton()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoRegister());
