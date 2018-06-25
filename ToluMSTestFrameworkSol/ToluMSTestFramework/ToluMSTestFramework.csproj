@@ -65,6 +65,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BaseClasses\Baseclass.cs" />
+    <Compile Include="ComponentHelper\BrowserActionHelper.cs" />
     <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
     <Compile Include="ComponentHelper\GeneralclassHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="TestScripts\browserActionn\GenericBrowserAction.cs" />
     <Compile Include="Z Randomscript\Constructor.cs" />
     <Compile Include="CustomException\UnknownBrowser.cs" />
     <Compile Include="Interfaces\IConfig.cs" />

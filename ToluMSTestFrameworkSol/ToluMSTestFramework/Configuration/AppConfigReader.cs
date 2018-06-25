@@ -36,7 +36,17 @@ namespace ToluMSTestFramework.Configuration
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoRegister);
         }
 
-        public string GetDemoHome()
+       public int GetPageTimeout()
+       {
+          var Timeout = ConfigurationManager.AppSettings.Get(AppConfigKeys.PageTimeout);
+           if (Timeout == null)
+           {
+               return 30;
+           }
+           return Convert.ToInt32(Timeout);
+       }
+
+       public string GetDemoHome()
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoHome);
         }
@@ -49,5 +59,6 @@ namespace ToluMSTestFramework.Configuration
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Email);
         }
+        
     }
 }

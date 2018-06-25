@@ -15,8 +15,7 @@ using ToluMSTestFramework.Settings;
 namespace ToluMSTestFramework.BaseClasses
 {
     [TestClass]
-    public class Baseclass
-    {
+    public class Baseclass{
         private static IWebDriver GetChromeBrowser()
         {
             IWebDriver driver = new ChromeDriver(GetChromeOptions());
@@ -28,7 +27,6 @@ namespace ToluMSTestFramework.BaseClasses
             cOptions.AddArgument("start-maximized");
             return cOptions;
         }
-
         private static ChromeOptions getMoreChromeOptions()
         {
             var moreCOption = new ChromeOptions();
@@ -40,7 +38,6 @@ namespace ToluMSTestFramework.BaseClasses
             IWebDriver driver = new ChromeDriver(getMoreChromeOptions());
             return driver;
         }
-        
         private static InternetExplorerOptions GetIEOptions()
         {
             var ieOptions = new InternetExplorerOptions();
@@ -56,7 +53,6 @@ namespace ToluMSTestFramework.BaseClasses
             FProfile = fxManager.GetProfile("default");
             return FProfile;
         }
-        
         private static IWebDriver GetFirefoxBrowser()
         {
             IWebDriver driver = new FirefoxDriver(GetFirefoxOption());
@@ -91,8 +87,8 @@ namespace ToluMSTestFramework.BaseClasses
                 default: 
                     throw  new UnknownBrowser("Browser is unknown:" +
                         ObjectRepository.Config.GetBrowser().ToString());
-
             }
+            ObjectRepository.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
         }
 
         [AssemblyCleanup]

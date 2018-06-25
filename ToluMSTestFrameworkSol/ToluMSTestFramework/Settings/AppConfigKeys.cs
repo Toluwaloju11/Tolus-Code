@@ -16,5 +16,6 @@ namespace ToluMSTestFramework.Settings
        public const string Groceries    = "Groceries";
        public const string DemoHome = "DemoHome";
        public const string DemoRegister = "DemoRegister";
+       public const string PageTimeout = "PageTimeout";
     }
 }
