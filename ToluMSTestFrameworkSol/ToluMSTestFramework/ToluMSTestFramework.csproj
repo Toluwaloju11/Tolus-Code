@@ -76,6 +76,11 @@
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="PageObjectModel\DownloadPage.cs" />
+    <Compile Include="PageObjectModel\HomePage.cs" />
+    <Compile Include="PageObjectModel\RegisterAccountPage.cs" />
+    <Compile Include="PageObjectModel\UserAccountPage.cs" />
+    <Compile Include="POM\TestPOM.cs" />
     <Compile Include="TestScripts\browserActionn\GenericBrowserAction.cs" />
     <Compile Include="Z Randomscript\Constructor.cs" />
     <Compile Include="CustomException\UnknownBrowser.cs" />
