@@ -76,10 +76,12 @@
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="DataDriven\SampleDataDrivenTest.cs" />
     <Compile Include="PageObjectModel\DownloadPage.cs" />
     <Compile Include="PageObjectModel\HomePage.cs" />
     <Compile Include="PageObjectModel\RegisterAccountPage.cs" />
     <Compile Include="PageObjectModel\UserAccountPage.cs" />
+    <Compile Include="PageObjectModel\UserDetailsPage.cs" />
     <Compile Include="POM\TestPOM.cs" />
     <Compile Include="TestScripts\browserActionn\GenericBrowserAction.cs" />
     <Compile Include="Z Randomscript\Constructor.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="TestScripts\TestLinkClick\TestLink.cs" />
     <Compile Include="TestScripts\TextBoxTest\TestTextBox.cs" />
     <Compile Include="TestScripts\Webelements\ElementsTest.cs" />
+    <Compile Include="Z Randomscript\Runpath.cs" />
     <Compile Include="Z Randomscript\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Z Randomscript\ConfigTest.cs" />

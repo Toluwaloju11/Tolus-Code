@@ -35,8 +35,12 @@ namespace ToluMSTestFramework.Configuration
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.DemoRegister);
         }
+        public string GetGoCompareHome()
+        {
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.GoCompareHome);
+        }
 
-       public int GetPageTimeout()
+        public int GetPageTimeout()
        {
           var Timeout = ConfigurationManager.AppSettings.Get(AppConfigKeys.PageTimeout);
            if (Timeout == null)

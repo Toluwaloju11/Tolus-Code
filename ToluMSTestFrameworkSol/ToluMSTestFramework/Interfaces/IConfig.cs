@@ -17,6 +17,7 @@ namespace ToluMSTestFramework.Interfaces
         string GetEmail();
         string GetDemoHome();
         string GetDemoRegister();
+        string GetGoCompareHome();
         int GetPageTimeout();
     }
 }

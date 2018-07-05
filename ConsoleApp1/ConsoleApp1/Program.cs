@@ -13,29 +13,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello there");
-            //String val1 = "My name is";
-            //String val2 = "Jesus";
-            //bool var3 = false;
-            //char val4 = 'A';
-            ////Console.WriteLine("Values {0},{1}", val1, val2);
-            //Console.WriteLine(val1+" "+val2);
-            //Console.ReadKey();
-            
-            char input = (char) Console.Read();
-            if ((input == 'a') || (input == 'b')|| (input == 'c'))
-            {
-                Console.WriteLine("{0} is not the correct Input", input);
-            }
-            //else if (input == 'c')
-            //{
-            //    Console.WriteLine("Input is : {0}", input);
+           Console.WriteLine("Please enter your Name");
+            String MyName = Console.ReadLine();
 
-            //}
+            //if ((Name == "Andre") || (Name == "Dada"))
+            if (MyName.Equals("Andre") || MyName.Equals("Dada"))
+            {
+                Console.WriteLine("Hi {0}, welcome to the programming course", MyName);
+            }
+            else if (MyName.Equals("John"))
+            {
+                Console.WriteLine("Sorry {0}, you are not registered for this course", MyName);
+            }
             else
             {
-                Console.WriteLine("{0} is not the correct Input", input);
-
+                Console.WriteLine("Sorry {0}, you are not registered for this course", MyName);
             }
             Console.ReadKey();
         }

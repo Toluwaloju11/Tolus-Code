@@ -10,12 +10,24 @@ namespace ToluMSTestFramework.PageObjectModel
 {
     public class UserAccountPage
     {
-        private readonly By _downloadLink = By.LinkText("Downloads");
+        #region Element
+        private readonly By _accountsLink = By.LinkText("Account");
+        #endregion
 
-        public DownloadPage NavigateToDownloadPage()
+        #region Action
+        public void NavigateToDownloadPage()
         {
-            LinkHelper.ClickLink(_downloadLink);
-            return new DownloadPage();
+            
         }
+        #endregion
+
+        #region Navigation
+        public new UserDetailsPage NavigateToUserDetailsPage()
+        {
+            LinkHelper.ClickLink(_accountsLink);
+            return new UserDetailsPage();
+        }
+        #endregion
+
     }
 }

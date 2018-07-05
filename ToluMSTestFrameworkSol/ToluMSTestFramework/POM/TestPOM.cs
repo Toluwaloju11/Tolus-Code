@@ -17,7 +17,7 @@ namespace ToluMSTestFramework.POM
         public void RunFirstPOMTest()
         {
             //Long Winded way of POM
-            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
+            //NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             //HomePage homePage = new HomePage();
             //RegisterAccountPage registerAccountPage = homePage.SelectRegisterAccountPage();
             //UserAccountPage userAccountPage = registerAccountPage.RegisterNewAccount();
@@ -25,8 +25,20 @@ namespace ToluMSTestFramework.POM
             //downloadPage.DownloadsPageView();
 
             //Short method of POM
-            var homePage = new HomePage();
-            homePage.SelectRegisterAccountPage().RegisterNewAccount().NavigateToDownloadPage().DownloadsPageView();
+            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
+                var homePage = new HomePage();
+            homePage.NavigateToRegisterAccount().
+                NavigateToUserAccountPage().
+                NavigateToUserDetailsPage().
+                ClickDownloadLink().
+                DownloadButton();
+
+
+
+
+
+
+
 
 
         }

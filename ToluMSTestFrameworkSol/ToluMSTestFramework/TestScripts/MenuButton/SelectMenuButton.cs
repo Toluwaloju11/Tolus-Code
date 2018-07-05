@@ -10,7 +10,7 @@ using ToluMSTestFramework.Settings;
 
 namespace ToluMSTestFramework.TestScripts.MenuButton
 {
-    [TestClass]
+        [TestClass]
     public class SelectMenuButton
     {
         [TestMethod, TestCategory("SELECTBUTTON")]
