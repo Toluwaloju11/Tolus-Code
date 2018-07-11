@@ -6,29 +6,35 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using ToluMSTestFramework.ComponentHelper;
 using OpenQA.Selenium.Support.PageObjects;
+using ToluMSTestFramework.Settings;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
+    //PAGE 1
    public class HomePage
    {
         #region Element
         private readonly By _myAccountTab   = By.ClassName("caret");
-        private readonly By _registerButton =
-           By.LinkText("Register");
-        //   [FindsBy(How = How.ClassName, Using = "caret")] private IWebElement _myAccountTab2;
+        private readonly By _registerButton = By.LinkText("Register");
+
+        //private readonly By _registerButton = By.XPath("//a[contains(text(),'Register')]");
         #endregion Element
 
         #region Actions
         public void ClickMyAccount()
        {
-           // MenuButtonHelper.SelectMenuButton(_myAccountTab);
-       }
+           //NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
+           //MenuButtonHelper.SelectMenuButton(_myAccountTab);
+           //MenuButtonHelper.SelectMenuButton(_registerButton);
+        }
         #endregion
         #region Navigation
         public new RegisterAccountPage NavigateToRegisterAccount()
        {
+            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             MenuButtonHelper.SelectMenuButton(_myAccountTab);
             MenuButtonHelper.SelectMenuButton(_registerButton);
+
             return new RegisterAccountPage();
        }
         #endregion 

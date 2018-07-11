@@ -19,7 +19,7 @@ namespace ToluMSTestFramework.PageObjectModel
         public void DownloadButton()
        {
            LinkHelper.ClickLink(_downloadLink);
-            //We can now put assertions her eg Page title as we are not returning any other pages
+            //We can now put assertions here eg Page title as we are not returning any other pages
        }
         #endregion
 

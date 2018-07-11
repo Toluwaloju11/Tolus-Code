@@ -27,7 +27,13 @@ namespace ToluMSTestFramework.PageObjectModel
         #region Actions
         public void  RegisterNewAccount()
         {
-        
+            
+            }
+        #endregion
+
+        #region Navigation
+        public new UserAccountPage NavigateToUserAccountPage()
+       {
             TextBoxHelper.SendTextToTextbox(_firstName, "Tolu");
             TextBoxHelper.SendTextToTextbox(_lastName, "Wright");
             TextBoxHelper.SendTextToTextbox(_email, "a12uskkd4@yahoo.com");
@@ -36,12 +42,6 @@ namespace ToluMSTestFramework.PageObjectModel
             TextBoxHelper.SendTextToTextbox(_confirmPassword, "goodguy");
             RadioButtonHelper.ClickOnOneRadiobutton(_newsletterYes);
             CheckBoxHelper.ClickCheckBox(_policyBox);
-            }
-        #endregion
-
-        #region Navigation
-        public new UserAccountPage NavigateToUserAccountPage()
-       {
             MenuButtonHelper.SelectMenuButton(_registerButton);
             return new UserAccountPage();
         }

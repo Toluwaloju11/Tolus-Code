@@ -25,13 +25,15 @@ namespace ToluMSTestFramework.POM
             //downloadPage.DownloadsPageView();
 
             //Short method of POM
-            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
                 var homePage = new HomePage();
-            homePage.NavigateToRegisterAccount().
-                NavigateToUserAccountPage().
-                NavigateToUserDetailsPage().
-                ClickDownloadLink().
-                DownloadButton();
+           RegisterAccountPage registerAccountPage = homePage.NavigateToRegisterAccount();
+           UserAccountPage userAccountPage = registerAccountPage.NavigateToUserAccountPage();
+           UserDetailsPage userDetailsPage =  userAccountPage.NavigateToUserDetailsPage();
+           DownloadPage downloadPage = userDetailsPage.ClickDownloadLink();
+            // .NavigateToUserAccountPage();
+            //NavigateToUserDetailsPage().
+            //ClickDownloadLink().
+            //DownloadButton();
 
 
 

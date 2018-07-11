@@ -29,9 +29,12 @@ namespace ToluMSTestFramework.Z_Randomscript
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
             var expectedHeader = "COMPARE GAS & ELECTRICITY";
-            var actaulHeader1 = ObjectRepository.driver.FindElement(By.XPath("//h1[contains(text(),'Switch today and ')]")).Text;
-            var actaulHeader2 = ObjectRepository.driver.FindElement(By.XPath("//h2[contains(text(),'Need help switching')]")).Text;
-            var actaulHeader3 = ObjectRepository.driver.FindElement(By.XPath("//h3[contains(text(),'About this service')]")).Text;
+            var actaulHeader1 = ObjectRepository.driver.FindElement(By.XPath
+                ("//h1[contains(text(),'Switch today and ')]")).Text;
+            var actaulHeader2 = ObjectRepository.driver.FindElement
+                (By.XPath("//h2[contains(text(),'Need help switching')]")).Text;
+            var actaulHeader3 = ObjectRepository.driver.FindElement
+                (By.XPath("//h3[contains(text(),'About this service')]")).Text;
             //Console.WriteLine(actaulHeader1);
             Assert.AreNotEqual(expectedHeader,actaulHeader1);
             Assert.AreNotEqual(expectedHeader,actaulHeader2);
@@ -41,7 +44,8 @@ namespace ToluMSTestFramework.Z_Randomscript
         public void NoPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            var expectedError = "Please provide your postcode, as different regions have different fuel prices.";
+            var expectedError = "Please provide your postcode, as different regions have different " +
+                                "fuel prices.";
             Thread.Sleep(3000);
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
             var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath
@@ -59,8 +63,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             //ObjectRepository.driver.FindElement(By.XPath("//input[@type='text'and @placeholder = 'Postcode']")).SendKeys("W30PN#");
             TextBoxHelper.SendTextToTextbox(By.XPath("//input[@type='text'and @placeholder = 'Postcode']"), "W30PN#");
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath("//div[contains(text(),'Please provide a valid UK postcode.')]"))
-            .Text;
+            var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath("//div[contains(text()," +"'Please provide a valid UK postcode.')]")).Text;
             Assert.AreEqual(expectedError, actualErrorMessage);
         }
         [TestMethod, TestCategory("A RUNPATH TEST")]
@@ -78,10 +81,11 @@ namespace ToluMSTestFramework.Z_Randomscript
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
             Thread.Sleep(3000);
             var actualURL = ObjectRepository.driver.Url;
-            Console.WriteLine(actualURL);
+            //Console.WriteLine(actualURL);
             Assert.AreNotEqual(expectedURL,actualURL);
             Thread.Sleep(3000);
-            var pageMainHeader = ObjectRepository.driver.FindElement(By.CssSelector("#vanilla > div.c-header > div > div > div > header.quote > div > h1.runpath-logo > img")).Text;
+            var pageMainHeader = ObjectRepository.driver.FindElement(By.CssSelector
+                ("#vanilla > div.c-header > div > div > div > header.quote > div > h1.runpath-logo > img")).Text;
             // #vanilla > div.c-header > div > div > div > header.quote > div > h1.runpath-logo > img
             Assert.IsFalse(pageMainHeader.Contains("YOUR SEARCH"));
         }

@@ -1,10 +1,15 @@
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\ToluMSTestFramework.dll.config
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\ToluMSTestFramework.dll
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\ToluMSTestFramework.pdb
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\System.ValueTuple.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\TechTalk.SpecFlow.dll
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.dll
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\System.ValueTuple.xml
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.xml
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.Support.xml
+C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.dll
 C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.pdb
-C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
