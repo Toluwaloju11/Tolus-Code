@@ -29,42 +29,38 @@ namespace ToluMSTestFramework.Z_Randomscript
             Assert.AreEqual(expectedText, actualText);
         }
         [TestMethod, TestCategory("VALTECH")]
-        //Navigate to ABOUT, SERVICES & ABOUT via top navigation and assert that H1 tag in each is displaying a relevantpage name. eg: Service page is displaying "Service"
+        //Navigate to ABOUT, SERVICES & WORK via top navigation and assert that H1 tag in each is displaying a relevantpage name. eg: Service page is displaying "Service"
         public void ABoutServiceWork()
        {
             NavigationHelper.NavigateToURL("https://www.valtech.com/");
-            var expectedAboutText   = "ABOUT";
-            var expectedServiceText = "SERVICES";
-            var expectedWorkText    = "WORK";
-            var actualAboutText = ObjectRepository.driver.FindElement(By.XPath("//a[@href='/about/']")).Text;
-            Thread.Sleep(3000);
+            var expectedAbout   = "About";
+            var expectedService = "Services";
+            var expectedWork    = "Work";
+          
+            MenuButtonHelper.SelectMenuButton(By.XPath("//a[@href='/about/']"));
+            var actualAbout = ObjectRepository.driver.FindElement(By.CssSelector(".page-header h1")).Text;
+            Assert.AreEqual(expectedAbout, actualAbout);
+
             MenuButtonHelper.SelectMenuButton(By.XPath("//a[@href='/services/']"));
-            //ObjectRepository.driver.FindElement(By.XPath("//a[@href='/services/']")).Click();
-            //ObjectRepository.driver.FindElement(By.CssSelector("#navigationMenuWrapper > div > ul > li:nth-child(3) > a > span")).Click();
-            //var actualServiceText = ObjectRepository.driver.FindElement(By.XPath("//a[@href='/services/']")).Text;
-            //ObjectRepository.driver.FindElement(By.XPath("//a[@href='/work/']")).Click();
-            //var actualWorkText = ObjectRepository.driver.FindElement(By.XPath("//a[@href='/work/']")).Text;
-            //Assert.AreEqual(expectedAboutText, actualAboutText);
-            //Assert.AreEqual(expectedServiceText, actualServiceText);
-            //Assert.AreEqual(expectedWorkText, actualWorkText);
-            //Console.WriteLine(expectedAboutText);
-            Console.WriteLine(actualAboutText);
+            var actualServices = ObjectRepository.driver.FindElement(By.CssSelector(".page-header h1")).Text;
+            Assert.AreEqual(expectedService,actualServices);
 
-           // var expectedAboutText =  ObjectRepository.driver.FindElement(By.XPath("//span[@itemprop='title']")).Text;
-
-
-            //MenuButtonHelper.SelectMenuButton(By.XPath("//a[@href='about']"));
-           // "//button[@type='submit']"
-            //var aboutText = ObjectRepository.driver.FindElement(By.XPath("//a[@href='/about/']")).Text;
-            // Assert.AreSame(aboutText.Contains("About"));
-           // "//div[contains(text()," + "'Please provide a valid UK postcode.')]"
+            MenuButtonHelper.SelectMenuButton(By.XPath("//a[@href='/work/']"));
+            var actualWork = ObjectRepository.driver.FindElement(By.CssSelector(".page-header h1")).Text;
+            Assert.AreEqual(expectedWork, actualWork);
         }
         [TestMethod, TestCategory("VALTECH")]
         //Navigate to Contact page and output how many offices in total
-       public void ValtechOffice()
+        public void ValtechOffices()
        {
             NavigationHelper.NavigateToURL("https://www.valtech.com/");
-        }
+            var allOffices = ObjectRepository.driver.FindElement(By.ClassName("foot__offices")).Text;
+            var allofficesCollection = allOffices.Split(',');
+            var numberOfOffices = allofficesCollection.Length-1;
+
+
+            Console.WriteLine(numberOfOffices);
+       }
 
     }
 }
