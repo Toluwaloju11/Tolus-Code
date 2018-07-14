@@ -1,19 +1,15 @@
-﻿using System;
-using System.Configuration;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using ToluMSTestFramework.ComponentHelper;
-using ToluMSTestFramework.Configuration;
 using ToluMSTestFramework.Settings;
 
-namespace ToluMSTestFramework
+namespace ToluMSTestFramework.Z_Randomscript
 {
     [TestClass]
     public class ConfigTest
     {
         [TestMethod]
-        [TestCategory("CONFIG")]
+        [TestCategory("SAMPLE")]
         public void TestMethod1()
         {
             var expectedUrl = "https://demo.opencart.com/index.php?route=account/register";

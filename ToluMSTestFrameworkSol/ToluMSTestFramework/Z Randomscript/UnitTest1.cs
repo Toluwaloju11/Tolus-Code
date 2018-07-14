@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ToluMSTestFramework.Configuration;
 
-namespace ToluMSTestFramework
+namespace ToluMSTestFramework.Z_Randomscript
 {
     [TestClass]
     public class UnitTest1 
@@ -19,7 +18,7 @@ namespace ToluMSTestFramework
             Console.WriteLine("Second test");
         }
         [TestMethod]
-        [TestCategory("config")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategory("config")]
         public void Sample()
         {
            //String conf = ConfigurationManager.AppSettings.Get("Browser");
@@ -30,6 +29,12 @@ namespace ToluMSTestFramework
             Console.WriteLine("The password is {0}", acr.GetPassword());
             Console.WriteLine("The username is {0}", acr.GetUsername());
            
+        }
+
+        [TestMethod,TestCategory("AAAAAA")]
+        public void NewMethod()
+        {
+            Console.WriteLine("Hey there");
         }
 
 

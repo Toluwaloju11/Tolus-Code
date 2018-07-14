@@ -14,7 +14,7 @@ namespace ToluMSTestFramework.Z_Randomscript
     [TestClass]
    public class Runpath
         {
-        [TestMethod, TestCategory("A RUNPATH TEST")]
+        [TestMethod, TestCategory("RUNPATH")]
        public void ValidatePageTitle()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
@@ -24,7 +24,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             Console.WriteLine(actualtitle);
             Assert.AreEqual(expectedpageTitle,actualtitle);
         }
-        [TestMethod, TestCategory("A RUNPATH TEST")]
+        [TestMethod, TestCategory("RUNPATH")]
         public void ValidateMainHeader()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
@@ -40,7 +40,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             Assert.AreNotEqual(expectedHeader,actaulHeader2);
             Assert.AreNotEqual(expectedHeader,actaulHeader3);
           }
-        [TestMethod, TestCategory("A RUNPATH TEST")]
+        [TestMethod, TestCategory("RUNPATH")]
         public void NoPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
@@ -54,7 +54,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             .Text;
             Assert.AreEqual(expectedError,actualErrorMessage);
         }
-        [TestMethod, TestCategory("A RUNPATH TEST")]
+        [TestMethod, TestCategory("RUNPATH")]
         public void IvalidPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
@@ -65,8 +65,9 @@ namespace ToluMSTestFramework.Z_Randomscript
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
             var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath("//div[contains(text()," +"'Please provide a valid UK postcode.')]")).Text;
             Assert.AreEqual(expectedError, actualErrorMessage);
+            
         }
-        [TestMethod, TestCategory("A RUNPATH TEST")]
+        [TestMethod, TestCategory("RUNPATH")]
         public void ValidPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());

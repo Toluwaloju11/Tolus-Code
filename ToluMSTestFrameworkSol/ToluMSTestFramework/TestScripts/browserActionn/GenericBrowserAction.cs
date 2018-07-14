@@ -32,7 +32,6 @@ namespace ToluMSTestFramework.TestScripts.browserActionn
             //ObjectRepository.driver.Navigate().Refresh();
             BrowserActionHelper.RefreshButton();
             Console.WriteLine("The page tittle is {0}:", WindowHelper.GetPageTitle());
-         
         }
 
         [TestMethod, TestCategory("Explicit Wait")]
