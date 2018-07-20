@@ -92,6 +92,7 @@
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="DataDriven\DataDriven.cs" />
     <Compile Include="DataDriven\RegisterAccountPageCopy.cs" />
     <Compile Include="DataDriven\SampleDataDrivenTest.cs" />
     <Compile Include="FeatureFiles\LoginTests.feature.cs">
@@ -106,14 +107,15 @@
     </Compile>
     <Compile Include="PageFactory\HomePageFactory.cs" />
     <Compile Include="PageFactory\RegistrationPageFactory.cs" />
-    <Compile Include="PageObjectModel\DownloadPage.cs" />
-    <Compile Include="PageObjectModel\HomePage.cs" />
-    <Compile Include="PageObjectModel\RegisterAccountPage.cs" />
-    <Compile Include="PageObjectModel\UserAccountPage.cs" />
-    <Compile Include="PageObjectModel\UserDetailsPage.cs" />
+    <Compile Include="PageObjectModel\Page5DownloadPage.cs" />
+    <Compile Include="PageObjectModel\Page1HomePage.cs" />
+    <Compile Include="PageObjectModel\Page2RegisterAccountPage.cs" />
+    <Compile Include="PageObjectModel\Page3UserAccountPage.cs" />
+    <Compile Include="PageObjectModel\Page4UserDetailsPage.cs" />
     <Compile Include="POM\TestPOM.cs" />
     <Compile Include="StepDefinitions\UserAccountCreation.cs" />
     <Compile Include="TestScripts\browserActionn\GenericBrowserAction.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Z Randomscript\Constructor.cs" />
     <Compile Include="CustomException\UnknownBrowser.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
@@ -143,6 +145,10 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DataFiles\CreateAccount.csv" />
+    <None Include="DataFiles\ExcelTestData.xlsx" />
+    <None Include="DataFiles\Login.csv" />
+    <None Include="DataFiles\OpenAccount.csv" />
     <None Include="FeatureFiles\LoginTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginTests.feature.cs</LastGenOutput>

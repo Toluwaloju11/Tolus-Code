@@ -19,7 +19,7 @@ namespace ToluMSTestFramework.DataDriven
         public void LoginToApp()
         {
            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome()); 
-            var homepage = new HomePage();
+            var homepage = new Page1HomePage();
         }
     }
 }

@@ -10,10 +10,10 @@ using ToluMSTestFramework.Settings;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
-   public class RegisterAccountPage
+   public class Page2RegisterAccountPage
    {
         #region Element
-        private readonly By _firstName       = By.Id("input-firstname");
+       private readonly By _firstName       = By.Id("input-firstname");
        private readonly By _lastName        = By.Id("input-lastname");
        private readonly By _email           = By.Id("input-email");
        private readonly By _telephone       = By.Id("input-telephone");
@@ -27,23 +27,23 @@ namespace ToluMSTestFramework.PageObjectModel
         #region Actions
         public void  RegisterNewAccount()
         {
-            
-            }
-        #endregion
-
-        #region Navigation
-        public new UserAccountPage NavigateToUserAccountPage()
-       {
             TextBoxHelper.SendTextToTextbox(_firstName, "Tolu");
             TextBoxHelper.SendTextToTextbox(_lastName, "Wright");
-            TextBoxHelper.SendTextToTextbox(_email, "a12uskkd4@yahoo.com");
+            TextBoxHelper.SendTextToTextbox(_email, "ajfkim09gg@yajjoo.com");
             TextBoxHelper.SendTextToTextbox(_telephone, "0123444566789");
             TextBoxHelper.SendTextToTextbox(_password, "goodguy");
             TextBoxHelper.SendTextToTextbox(_confirmPassword, "goodguy");
             RadioButtonHelper.ClickOnOneRadiobutton(_newsletterYes);
             CheckBoxHelper.ClickCheckBox(_policyBox);
+        }
+        #endregion
+
+        #region Navigation
+        public new Page3UserAccountPage NavigateToUserAccountPage()
+       {
+            
             MenuButtonHelper.SelectMenuButton(_registerButton);
-            return new UserAccountPage();
+            return new Page3UserAccountPage();
         }
         #endregion
     }

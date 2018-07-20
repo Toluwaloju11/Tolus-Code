@@ -1,7 +1,7 @@
 ﻿Feature: Validate the Login feature
 
 Background: Given I am on the login page
-@mytag
+
 Scenario: Valid Login Scenario
 	And I have entered a valid username
 	And I have entered a valid username

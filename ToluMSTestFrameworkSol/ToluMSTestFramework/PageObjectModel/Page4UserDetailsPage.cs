@@ -3,22 +3,23 @@ using ToluMSTestFramework.ComponentHelper;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
-    public class UserDetailsPage
+    public class Page4UserDetailsPage
     {
         #region Element
-        private readonly By _downloadLink = By.CssSelector("#content > ul:nth-child(4) > li:nth-child(2) > a");////*[@id="content"]/ul[2]/li[2]/a
-        #endregion
-#region Actions
+
+        private readonly By _downloadLink = By.LinkText("Downloads");
+         #endregion
+        #region Actions
         public void DownloadAction()
         {
             //No Actions on this page
         }
         #endregion
         #region Navigation
-        public  new DownloadPage ClickDownloadLink()
+        public  new Page5DownloadPage ClickDownloadLink()
         {
             LinkHelper.ClickLink(_downloadLink);
-            return new DownloadPage();
+            return new Page5DownloadPage();
         }
         #endregion
     }

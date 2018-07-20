@@ -1,4 +1,4 @@
-﻿@SMOKETEST
+﻿
 Feature: UserAccountCreation Tests
 User should be able to create an account when all mandatory fields are completed
 	

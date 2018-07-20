@@ -16,33 +16,19 @@ namespace ToluMSTestFramework.POM
         [TestMethod, TestCategory("PAGE OBJECT MODEL")]
         public void RunFirstPOMTest()
         {
-            //Long Winded way of POM
-            //NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
-            //HomePage homePage = new HomePage();
-            //RegisterAccountPage registerAccountPage = homePage.SelectRegisterAccountPage();
-            //UserAccountPage userAccountPage = registerAccountPage.RegisterNewAccount();
-            //DownloadPage downloadPage = userAccountPage.NavigateToDownloadPage();
-            //downloadPage.DownloadsPageView();
+            //LONG METHOD
+            //var homePage = new Page1HomePage();
+            //Page2RegisterAccountPage registerAccountPage = homePage.NavigateToRegisterAccount();
+            //Page3UserAccountPage userAccountPage = registerAccountPage.NavigateToUserAccountPage();
+            //Page4UserDetailsPage userDetailsPage = userAccountPage.NavigateToUserDetailsPage();
+            //Page5DownloadPage downloadPage = userDetailsPage.ClickDownloadLink();
 
-            //Short method of POM
-                var homePage = new HomePage();
-           RegisterAccountPage registerAccountPage = homePage.NavigateToRegisterAccount();
-           UserAccountPage userAccountPage = registerAccountPage.NavigateToUserAccountPage();
-           UserDetailsPage userDetailsPage =  userAccountPage.NavigateToUserDetailsPage();
-           DownloadPage downloadPage = userDetailsPage.ClickDownloadLink();
-            // .NavigateToUserAccountPage();
-            //NavigateToUserDetailsPage().
-            //ClickDownloadLink().
-            //DownloadButton();
-
-
-
-
-
-
-
-
-
+            //SHORT
+            var homePage = new Page1HomePage();
+            homePage.NavigateToRegisterAccount()
+                .NavigateToUserAccountPage()
+                .NavigateToUserDetailsPage()
+                .ClickDownloadLink().NoNavigation();
         }
     }
 }

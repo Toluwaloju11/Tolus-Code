@@ -11,7 +11,7 @@ using ToluMSTestFramework.Settings;
 namespace ToluMSTestFramework.PageObjectModel
 {
     //PAGE 1
-   public class HomePage
+   public class Page1HomePage
    {
         #region Element
         private readonly By _myAccountTab   = By.ClassName("caret");
@@ -28,14 +28,15 @@ namespace ToluMSTestFramework.PageObjectModel
            //MenuButtonHelper.SelectMenuButton(_registerButton);
         }
         #endregion
+
         #region Navigation
-        public new RegisterAccountPage NavigateToRegisterAccount()
+        public new Page2RegisterAccountPage NavigateToRegisterAccount()
        {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             MenuButtonHelper.SelectMenuButton(_myAccountTab);
             MenuButtonHelper.SelectMenuButton(_registerButton);
 
-            return new RegisterAccountPage();
+            return new Page2RegisterAccountPage();
        }
         #endregion 
 

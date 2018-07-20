@@ -15,3 +15,23 @@
 [0311/161232.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0311/161232.688:ERROR:exception_snapshot_win.cc(88)] thread ID 7700 not found in process
 [0311/161232.688:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0716/212056.289:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.298:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0716/212056.299:ERROR:exception_snapshot_win.cc(88)] thread ID 13556 not found in process
+[0717/104334.856:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0717/104334.866:ERROR:exception_snapshot_win.cc(88)] thread ID 9556 not found in process

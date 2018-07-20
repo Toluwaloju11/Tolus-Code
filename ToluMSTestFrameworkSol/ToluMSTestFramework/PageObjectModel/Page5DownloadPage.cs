@@ -8,7 +8,7 @@ using ToluMSTestFramework.ComponentHelper;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
-   public class DownloadPage
+   public class Page5DownloadPage
    {
         #region Elements
         private readonly By _downloadLink =

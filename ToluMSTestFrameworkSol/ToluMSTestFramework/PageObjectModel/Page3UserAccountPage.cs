@@ -8,7 +8,7 @@ using ToluMSTestFramework.ComponentHelper;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
-    public class UserAccountPage
+    public class Page3UserAccountPage
     {
         #region Element
         private readonly By _accountsLink = By.LinkText("Account");
@@ -22,10 +22,10 @@ namespace ToluMSTestFramework.PageObjectModel
         #endregion
 
         #region Navigation
-        public new UserDetailsPage NavigateToUserDetailsPage()
+        public new Page4UserDetailsPage NavigateToUserDetailsPage()
         {
             LinkHelper.ClickLink(_accountsLink);
-            return new UserDetailsPage();
+            return new Page4UserDetailsPage();
         }
         #endregion
 
