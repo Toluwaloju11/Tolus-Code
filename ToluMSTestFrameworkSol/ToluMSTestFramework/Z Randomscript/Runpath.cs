@@ -44,27 +44,21 @@ namespace ToluMSTestFramework.Z_Randomscript
         public void NoPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            var expectedError = "Please provide your postcode, as different regions have different " +
-                                "fuel prices.";
-            Thread.Sleep(3000);
-            MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath
-            ("//div[contains(text(),'Please provide your postcode, as different " +
-            "regions have different fuel prices.')]"))
-            .Text;
-            Assert.AreEqual(expectedError,actualErrorMessage);
+            ObjectRepository.driver.FindElement(By.CssSelector("#AddressLookup_SearchButton")).Click();
+            //MenuButtonHelper.SelectMenuButton(By.CssSelector("#AddressLookup_SearchButton"));
+            //var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div[class*='message']")).Text;
+            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div.field-validation__text.field-validation--string > div")).Text;
+            Assert.AreEqual("Please provide a valid postcode.", actualErrorMessage);
         }
         [TestMethod, TestCategory("RUNPATH")]
         public void IvalidPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            var expectedError = "Please provide a valid UK postcode.";
-            Thread.Sleep(3000);
-            //ObjectRepository.driver.FindElement(By.XPath("//input[@type='text'and @placeholder = 'Postcode']")).SendKeys("W30PN#");
-            TextBoxHelper.SendTextToTextbox(By.XPath("//input[@type='text'and @placeholder = 'Postcode']"), "W30PN#");
+            TextBoxHelper.SendTextToTextbox(By.CssSelector("#AddressLookup_Postcode"), "W30PN#");
+            TextBoxHelper.SendTextToTextbox(By.CssSelector(""), "W30PN#");
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            var actualErrorMessage = ObjectRepository.driver.FindElement(By.XPath("//div[contains(text()," +"'Please provide a valid UK postcode.')]")).Text;
-            Assert.AreEqual(expectedError, actualErrorMessage);
+            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("")).Text;
+            Assert.AreEqual("Please provide a valid UK postcode.", actualErrorMessage, "Values are not equal");
             
         }
         [TestMethod, TestCategory("RUNPATH")]
@@ -74,7 +68,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             var expectedHeader = "START YOUR SEARCH";
             var expectedURL = "https://energy.gocompare.com/gas-electricity/step1";
             Thread.Sleep(3000);
-            TextBoxHelper.SendTextToTextbox(By.XPath("//input[@type='text'and @placeholder = 'Postcode']"), "W30PN");
+            TextBoxHelper.SendTextToTextbox(By.XPath("#AddressLookup_Postcode"), "W30PN");
             MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
             Thread.Sleep(3000);
             MenuButtonHelper.SelectMenuButton(By.XPath("//p[contains(text(),'British Gas')]"));

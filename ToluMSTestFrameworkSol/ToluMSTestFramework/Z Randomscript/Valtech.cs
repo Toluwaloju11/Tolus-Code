@@ -25,18 +25,17 @@ namespace ToluMSTestFramework.Z_Randomscript
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.valtech.com/");
             driver.Manage().Window.Maximize();
-            //driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept")).Click();
-             IWebElement cookies = driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept"));
+            IWebElement cookies = driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept"));
             if (cookies.Displayed)
             {
                 cookies.Click();
             }
-
             var expectedText = "LATEST NEWS";
-            var actualText = driver.FindElement(By.CssSelector("#container > div:nth-child(2) > div:nth-child(3) > div.news-post__listing-header > header > h2")).Text;
+            var actualText = driver.FindElement(By.CssSelector
+                ("#container > div:nth-child(2) > div:nth-child(3) > div.news-post__listing-header > header > h2")).Text;
             Assert.AreEqual(expectedText, actualText);
             driver.Quit();
-            }
+        }
         #endregion
 
         #region Navigate to ABOUT, SERVICES & WORK via top navigation and assert that H1 tag in each is displaying a relevantpage name. eg: Service page is displaying "Service
@@ -46,8 +45,15 @@ namespace ToluMSTestFramework.Z_Randomscript
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.valtech.com/");
             driver.Manage().Window.Maximize();
+            IWebElement cookies = driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept"));
+            if (cookies.Displayed)
+            {
+                cookies.Click();
+            }
             driver.FindElement(By.ClassName("icon-menu")).Click();
-            driver.FindElement(By.XPath("//a[@href='/about/']")).Click();
+            driver.FindElement(By.XPath("//ul[@class='site-nav__menu__primary']/li[1]")).Click();
+            
+            //driver.FindElement(By.XPath("//a[@href='/about/']")).Click();
             //var expectedAbout = "About";
             //var actualAbout = driver.FindElement(By.CssSelector(".page-header h1")).Text;
             //Assert.AreEqual(expectedAbout, actualAbout);
@@ -59,7 +65,7 @@ namespace ToluMSTestFramework.Z_Randomscript
             //var expectedWork = "Work";
             //var actualWork = driver.FindElement(By.CssSelector(".page-header h1")).Text;
             //Assert.AreEqual(expectedWork, actualWork);
-            //driver.Quit;
+            driver.Quit();
         }
         #endregion
        
@@ -70,7 +76,11 @@ namespace ToluMSTestFramework.Z_Randomscript
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.valtech.com/");
             driver.Manage().Window.Maximize();
-            driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept")).Click();
+            IWebElement cookies = driver.FindElement(By.CssSelector("a#CybotCookiebotDialogBodyButtonAccept"));
+            if (cookies.Displayed)
+            {
+                cookies.Click();
+            }
             driver.FindElement(By.ClassName("hamburger__flipper")).Click();
             var country = driver.FindElements(By.ClassName("list-item list-item--active"));
             var allCountry = country.Count;
@@ -78,6 +88,22 @@ namespace ToluMSTestFramework.Z_Randomscript
             driver.Quit();
         }
         #endregion
+        [TestMethod, TestCategory("Implicit/Explicit")]
+        public void ImplicitWait()
+        {
+
+            IWebDriver driver = new ChromeDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);//IMPLICIT WAIT
+            WebDriverWait wait = new WebDriverWait(driver,TimeSpan.FromSeconds(10));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(250);
+            wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(ElementNotVisibleException));
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@type='sss']"))).SendKeys("clem");
+            driver.Navigate().GoToUrl("https://demo.opencart.com/");
+            driver.Manage().Window.Maximize();
+            driver.FindElement(By.XPath("//a[@title='My Account']")).Click(); 
+            driver.Quit();
+        }
+
 
 
     }

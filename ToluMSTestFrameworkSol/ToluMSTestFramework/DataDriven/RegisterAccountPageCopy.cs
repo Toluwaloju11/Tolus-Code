@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,14 @@ namespace ToluMSTestFramework.DataDriven
     [TestClass]
     public class RegisterAccountPageCopy
     {
-        public TestContext Testcontext { get; set; }
+
+        private TestContext _testContext;
+        public TestContext Testcontext
+        {
+            get { return _testContext; }
+            set { _testContext = value; }
+        }
+        //public TestContext Testcontext { get; set; }
         private readonly By _myAccountTab = By.ClassName("caret");
         private readonly By _registerButton = By.LinkText("Register");
         private readonly By _firstName = By.Id("input-firstname");
@@ -43,12 +51,12 @@ namespace ToluMSTestFramework.DataDriven
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             MenuButtonHelper.SelectMenuButton(_myAccountTab);
             MenuButtonHelper.SelectMenuButton(_registerButton);
-            TextBoxHelper.SendTextToTextbox(_firstName,Testcontext.DataRow["FIRSTNAME"].ToString());
-            TextBoxHelper.SendTextToTextbox(_lastName,Testcontext.DataRow["LASTNAME"].ToString());
-            TextBoxHelper.SendTextToTextbox(_email,Testcontext.DataRow["EMAIL"].ToString());
-            TextBoxHelper.SendTextToTextbox(_telephone,Testcontext.DataRow["TELEPHONE"].ToString());
-            TextBoxHelper.SendTextToTextbox(_password,Testcontext.DataRow["PASSWORD"].ToString());
-            TextBoxHelper.SendTextToTextbox(_confirmPassword,Testcontext.DataRow["CONFIRMPASSWORD"].ToString());
+            TextBoxHelper.SendTextToTextbox(_firstName,_testContext.DataRow["FIRSTNAME"].ToString());
+            TextBoxHelper.SendTextToTextbox(_lastName, _testContext.DataRow["LASTNAME"].ToString());
+            TextBoxHelper.SendTextToTextbox(_email, _testContext.DataRow["EMAIL"].ToString());
+            TextBoxHelper.SendTextToTextbox(_telephone, _testContext.DataRow["TELEPHONE"].ToString());
+            TextBoxHelper.SendTextToTextbox(_password, _testContext.DataRow["PASSWORD"].ToString());
+            TextBoxHelper.SendTextToTextbox(_confirmPassword, _testContext.DataRow["CONFIRMPASSWORD"].ToString());
             RadioButtonHelper.ClickOnOneRadiobutton(_newsletterYes);
             CheckBoxHelper.ClickCheckBox(_policyBox);
             MenuButtonHelper.SelectMenuButton(_createAccountButton);
@@ -64,16 +72,16 @@ namespace ToluMSTestFramework.DataDriven
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             MenuButtonHelper.SelectMenuButton(_myAccountTab);
             MenuButtonHelper.SelectMenuButton(_loginTab);
-            TextBoxHelper.SendTextToTextbox(_loginEmail, Testcontext.DataRow["EMAIL"].ToString());
-            TextBoxHelper.SendTextToTextbox(_loginPassword, Testcontext.DataRow["PASSWORD"].ToString());
+            TextBoxHelper.SendTextToTextbox(_loginEmail, _testContext.DataRow["EMAIL"].ToString());
+            TextBoxHelper.SendTextToTextbox(_loginPassword, _testContext.DataRow["PASSWORD"].ToString());
             MenuButtonHelper.SelectMenuButton(_loginUserButton);
             //IWebDriver driver = new ChromeDriver();
             //driver.Navigate().GoToUrl("https://demo.opencart.com/");
             //driver.Manage().Window.Maximize();
             //driver.FindElement(_myAccountTab).Click();
             //driver.FindElement(_loginTab).Click();
-            //driver.FindElement(_loginEmail).SendKeys(Testcontext.DataRow["EMAIL"].ToString());
-            //driver.FindElement(_loginPassword).SendKeys(Testcontext.DataRow["PASSWORD"].ToString());
+            //driver.FindElement(_loginEmail).SendKeys(_testContext.DataRow["EMAIL"].ToString());
+            //driver.FindElement(_loginPassword).SendKeys(_testContext.DataRow["PASSWORD"].ToString());
             //driver.FindElement(_loginUserButton).Click();
             //driver.Quit();
         }
@@ -86,12 +94,12 @@ namespace ToluMSTestFramework.DataDriven
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
             MenuButtonHelper.SelectMenuButton(_myAccountTab);
             MenuButtonHelper.SelectMenuButton(_registerButton);
-            TextBoxHelper.SendTextToTextbox(_firstName, Testcontext.DataRow["Firstname"].ToString());
-            TextBoxHelper.SendTextToTextbox(_lastName, Testcontext.DataRow["Lastname"].ToString());
-            TextBoxHelper.SendTextToTextbox(_email, Testcontext.DataRow["Email"].ToString());
-            TextBoxHelper.SendTextToTextbox(_telephone, Testcontext.DataRow["Telephone"].ToString());
-            TextBoxHelper.SendTextToTextbox(_password, Testcontext.DataRow["Password"].ToString());
-            TextBoxHelper.SendTextToTextbox(_confirmPassword, Testcontext.DataRow["ConfirmPassword"].ToString());
+            TextBoxHelper.SendTextToTextbox(_firstName, _testContext.DataRow["Firstname"].ToString());
+            TextBoxHelper.SendTextToTextbox(_lastName, _testContext.DataRow["Lastname"].ToString());
+            TextBoxHelper.SendTextToTextbox(_email, _testContext.DataRow["Email"].ToString());
+            TextBoxHelper.SendTextToTextbox(_telephone, _testContext.DataRow["Telephone"].ToString());
+            TextBoxHelper.SendTextToTextbox(_password, _testContext.DataRow["Password"].ToString());
+            TextBoxHelper.SendTextToTextbox(_confirmPassword, _testContext.DataRow["ConfirmPassword"].ToString());
             RadioButtonHelper.ClickOnOneRadiobutton(_newsletterYes);
             CheckBoxHelper.ClickCheckBox(_policyBox);
             MenuButtonHelper.SelectMenuButton(_createAccountButton);

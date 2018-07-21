@@ -93,14 +93,16 @@
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
     <Compile Include="DataDriven\DataDriven.cs" />
-    <Compile Include="DataDriven\RegisterAccountPageCopy.cs" />
+    <Compile Include="DataDriven\RegisterAccountPageCopy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="DataDriven\SampleDataDrivenTest.cs" />
-    <Compile Include="FeatureFiles\LoginTests.feature.cs">
+    <Compile Include="Z Randomscript\FeatureFiles\LoginTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginTests.feature</DependentUpon>
     </Compile>
-    <Compile Include="FeatureFiles\UserAccountCreation.feature.cs">
+    <Compile Include="Z Randomscript\FeatureFiles\UserAccountCreation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserAccountCreation.feature</DependentUpon>
@@ -139,25 +141,42 @@
   <ItemGroup>
     <Folder Include="ExcelReader\" />
     <Folder Include="PageObject\" />
+    <Folder Include="Recources\" />
     <Folder Include="SeleniumTestData\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataFiles\CreateAccount.csv" />
-    <None Include="DataFiles\ExcelTestData.xlsx" />
-    <None Include="DataFiles\Login.csv" />
-    <None Include="DataFiles\OpenAccount.csv" />
-    <None Include="FeatureFiles\LoginTests.feature">
+    <None Include="DataFiles\CreateAccount.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\ExcelTestData.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\Login.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\OpenAccount.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Z Randomscript\FeatureFiles\LoginTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginTests.feature.cs</LastGenOutput>
     </None>
-    <None Include="FeatureFiles\UserAccountCreation.feature">
+    <None Include="Z Randomscript\FeatureFiles\UserAccountCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>UserAccountCreation.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataFiles\Test.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataFiles\TestData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

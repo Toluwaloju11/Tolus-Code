@@ -1,0 +1,26 @@
+CSS
+
+
+#IDVALUE
+.classname
+
+SINGLE ATTRIBUTES
+tagname[attribute='AttributeValue']
+
+MULTIPLE ATTRIBUTES
+tagname[attribute='AttributeValue'][attribute2='AttributeValue']
+
+CONTAINS ATTRIBUTES
+tagname[attribute*='partialAttributeValue']
+
+Starts With ATTRIBUTES
+tagname[attribute^='partialAttributeValue']
+
+Ends With ATTRIBUTES
+tagname[attribute$='partialAttributeValue']
+
+Identifying immidiate child (DIRECT CHILD)
+div[attribute='partialAttributeValue'] >div
+
+Identifying SUB CHILD
+div[attribute='partialAttributeValue']  div
