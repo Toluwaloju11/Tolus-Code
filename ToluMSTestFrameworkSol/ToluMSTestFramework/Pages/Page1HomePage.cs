@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using ToluMSTestFramework.ComponentHelper;
@@ -14,18 +15,22 @@ namespace ToluMSTestFramework.PageObjectModel
    public class Page1HomePage
    {
         #region Element
-        private readonly By _myAccountTab   = By.ClassName("caret");
-        private readonly By _registerButton = By.LinkText("Register");
-
-        //private readonly By _registerButton = By.XPath("//a[contains(text(),'Register')]");
+        [FindsBy(How = How.CssSelector, Using = "a[title='My Account']")]
+        private IWebElement _myAccountTab;
+        [FindsBy(How = How.CssSelector, Using = "#top-links > ul > li.dropdown.open > ul > li:nth-child(1) > a")]
+        private IWebElement _registerButton;
         #endregion Element
+
+       public Page1HomePage()
+       {
+           OpenQA.Selenium.Support.PageObjects.PageFactory.InitElements(ObjectRepository.driver, this);
+       }
 
         #region Actions
         public void ClickMyAccount()
        {
-           //NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
-           //MenuButtonHelper.SelectMenuButton(_myAccountTab);
-           //MenuButtonHelper.SelectMenuButton(_registerButton);
+           NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
+            
         }
         #endregion
 
@@ -33,12 +38,10 @@ namespace ToluMSTestFramework.PageObjectModel
         public new Page2RegisterAccountPage NavigateToRegisterAccount()
        {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
-            MenuButtonHelper.SelectMenuButton(_myAccountTab);
-            MenuButtonHelper.SelectMenuButton(_registerButton);
-
+            _myAccountTab.Click();
+            _registerButton.Click();
             return new Page2RegisterAccountPage();
        }
         #endregion 
-
     }
 }

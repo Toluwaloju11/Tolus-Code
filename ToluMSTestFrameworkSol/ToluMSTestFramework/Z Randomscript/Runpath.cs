@@ -9,6 +9,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using ToluMSTestFramework.ComponentHelper;
 using ToluMSTestFramework.Settings;
+using OpenQA.Selenium.Support.UI;
+using ToluMSTestFramework.TestScripts.DropDownMenu;
+
 namespace ToluMSTestFramework.Z_Randomscript
 {
     [TestClass]
@@ -28,61 +31,78 @@ namespace ToluMSTestFramework.Z_Randomscript
         public void ValidateMainHeader()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            var expectedHeader = "COMPARE GAS & ELECTRICITY";
             var actaulHeader1 = ObjectRepository.driver.FindElement(By.XPath
                 ("//h1[contains(text(),'Switch today and ')]")).Text;
             var actaulHeader2 = ObjectRepository.driver.FindElement
                 (By.XPath("//h2[contains(text(),'Need help switching')]")).Text;
             var actaulHeader3 = ObjectRepository.driver.FindElement
                 (By.XPath("//h3[contains(text(),'About this service')]")).Text;
-            //Console.WriteLine(actaulHeader1);
-            Assert.AreNotEqual(expectedHeader,actaulHeader1);
-            Assert.AreNotEqual(expectedHeader,actaulHeader2);
-            Assert.AreNotEqual(expectedHeader,actaulHeader3);
+            Assert.AreNotEqual("COMPARE GAS & ELECTRICITY", actaulHeader1);
+            Assert.AreNotEqual("COMPARE GAS & ELECTRICITY", actaulHeader2);
+            Assert.AreNotEqual("COMPARE GAS & ELECTRICITY", actaulHeader3);
           }
         [TestMethod, TestCategory("RUNPATH")]
         public void NoPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            ObjectRepository.driver.FindElement(By.CssSelector("#AddressLookup_SearchButton")).Click();
-            //MenuButtonHelper.SelectMenuButton(By.CssSelector("#AddressLookup_SearchButton"));
-            //var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div[class*='message']")).Text;
-            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div.field-validation__text.field-validation--string > div")).Text;
+            Thread.Sleep(5000);
+            ObjectRepository.driver.FindElement(By.CssSelector("a[id='AddressLookup_SearchButton']")).Click();
+            Thread.Sleep(3000);
+            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div[class*='message']")).Text;
             Assert.AreEqual("Please provide a valid postcode.", actualErrorMessage);
+            Console.WriteLine(actualErrorMessage);
         }
         [TestMethod, TestCategory("RUNPATH")]
         public void IvalidPostcodeTest()
         {
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            TextBoxHelper.SendTextToTextbox(By.CssSelector("#AddressLookup_Postcode"), "W30PN#");
-            TextBoxHelper.SendTextToTextbox(By.CssSelector(""), "W30PN#");
-            MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("")).Text;
-            Assert.AreEqual("Please provide a valid UK postcode.", actualErrorMessage, "Values are not equal");
-            
-        }
+            Thread.Sleep(5000);
+            TextBoxHelper.SendTextToTextbox(By.CssSelector("#AddressLookup_Postcode"), "W30");
+            ObjectRepository.driver.FindElement(By.CssSelector("a[id='AddressLookup_SearchButton']")).Click();
+            Thread.Sleep(3000);
+            var actualErrorMessage = ObjectRepository.driver.FindElement(By.CssSelector("div[class*='message']")).Text;
+            Assert.AreEqual("Please provide a valid postcode.", actualErrorMessage, "Values are not equal");
+            Console.WriteLine(actualErrorMessage);
+           }
         [TestMethod, TestCategory("RUNPATH")]
         public void ValidPostcodeTest()
         {
+            //ObjectRepository.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+            WebDriverWait wait = new WebDriverWait(ObjectRepository.driver, TimeSpan.FromSeconds(50));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(250);
+            wait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(ElementNotVisibleException));
             NavigationHelper.NavigateToURL(ObjectRepository.Config.GetGoCompareHome());
-            var expectedHeader = "START YOUR SEARCH";
-            var expectedURL = "https://energy.gocompare.com/gas-electricity/step1";
-            Thread.Sleep(3000);
-            TextBoxHelper.SendTextToTextbox(By.XPath("#AddressLookup_Postcode"), "W30PN");
-            MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            Thread.Sleep(3000);
-            MenuButtonHelper.SelectMenuButton(By.XPath("//p[contains(text(),'British Gas')]"));
-            Thread.Sleep(2000);
-            MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
-            Thread.Sleep(3000);
-            var actualURL = ObjectRepository.driver.Url;
-            //Console.WriteLine(actualURL);
-            Assert.AreNotEqual(expectedURL,actualURL);
-            Thread.Sleep(3000);
-            var pageMainHeader = ObjectRepository.driver.FindElement(By.CssSelector
-                ("#vanilla > div.c-header > div > div > div > header.quote > div > h1.runpath-logo > img")).Text;
-            // #vanilla > div.c-header > div > div > div > header.quote > div > h1.runpath-logo > img
-            Assert.IsFalse(pageMainHeader.Contains("YOUR SEARCH"));
+            Thread.Sleep(1000);
+            TextBoxHelper.SendTextToTextbox(By.CssSelector("#AddressLookup_Postcode"), "W30PN");
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("a[id='AddressLookup_SearchButton']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("#AddressLookup_AddressList li:nth-child(1)"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='Both gas and electricity']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='IsDualFuel_Yes']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='dual-British Gas']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='dual-Monthly Direct Debit']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='DualFuelIsEconomy7_Yes']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("label[for='dual-Paper']"));
+            Thread.Sleep(1000);
+            MenuButtonHelper.SelectMenuButton(By.CssSelector("#DualFuelTariff_EnabledDropdown"));
+            Thread.Sleep(1000);
+            //DropDownHelper.SelectByIndex(By.CssSelector("#DualFuelTariff_EnabledDropdown"),1);
+            DropDownHelper.SelectByText(By.CssSelector("#DualFuelTariff_EnabledDropdown"), "Fixed Price July 2018");
+            //MenuButtonHelper.SelectMenuButton(By.CssSelector("span[class='continue__text']"));
+            //MenuButtonHelper.SelectMenuButton(By.CssSelector("//p[contains(text(),'British Gas')]"));
+            //MenuButtonHelper.SelectMenuButton(By.XPath("//button[@type='submit']"));
+            //Assert.AreNotEqual("https://energy.gocompare.com/gas-electricity/step1", ObjectRepository.driver.Url);
+            //Thread.Sleep(2000);
+            //var pageMainHeader = ObjectRepository.driver.FindElement(By.CssSelector
+            //    ("")).Text;
+            //Assert.IsFalse(pageMainHeader.Contains("YOUR SEARCH"));
         }
     }
 }

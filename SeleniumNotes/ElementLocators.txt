@@ -24,3 +24,18 @@ div[attribute='partialAttributeValue'] >div
 
 Identifying SUB CHILD
 div[attribute='partialAttributeValue']  div
+
+Identifying the first sub childchild 
+.classname >ChildTagName:nth-child(index eg 1)
+.deaultFunc >li:nth-child(1)
+
+Identifying first child using text
+.classname >ChildTagName:first-child
+.deaultFunc >li:first-child
+
+Identifying last child using text
+.classname >ChildTagName:last-child
+.deaultFunc >li:last-child
+
+
+

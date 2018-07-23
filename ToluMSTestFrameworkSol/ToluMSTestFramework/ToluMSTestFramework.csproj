@@ -37,6 +37,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Faker.NET4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.Net.1.0.3\lib\net40\Faker.NET4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -83,11 +87,13 @@
     <Compile Include="BaseClasses\Baseclass.cs" />
     <Compile Include="ComponentHelper\BrowserActionHelper.cs" />
     <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
+    <Compile Include="ComponentHelper\DropDownHelper.cs" />
     <Compile Include="ComponentHelper\GeneralclassHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\MenuButtonHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
     <Compile Include="ComponentHelper\RadioButtonHelper.cs" />
+    <Compile Include="ComponentHelper\RandomDataGenerator.cs" />
     <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="ComponentHelper\WindowHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
@@ -97,6 +103,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DataDriven\SampleDataDrivenTest.cs" />
+    <Compile Include="Pages\UsingAttribute.cs" />
+    <Compile Include="TestScripts\DropDownMenu\IwebElement.cs" />
     <Compile Include="Z Randomscript\FeatureFiles\LoginTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,11 +117,11 @@
     </Compile>
     <Compile Include="PageFactory\HomePageFactory.cs" />
     <Compile Include="PageFactory\RegistrationPageFactory.cs" />
-    <Compile Include="PageObjectModel\Page5DownloadPage.cs" />
-    <Compile Include="PageObjectModel\Page1HomePage.cs" />
-    <Compile Include="PageObjectModel\Page2RegisterAccountPage.cs" />
-    <Compile Include="PageObjectModel\Page3UserAccountPage.cs" />
-    <Compile Include="PageObjectModel\Page4UserDetailsPage.cs" />
+    <Compile Include="Pages\Page5DownloadPage.cs" />
+    <Compile Include="Pages\Page1HomePage.cs" />
+    <Compile Include="Pages\Page2RegisterAccountPage.cs" />
+    <Compile Include="Pages\Page3UserAccountPage.cs" />
+    <Compile Include="Pages\Page4UserDetailsPage.cs" />
     <Compile Include="POM\TestPOM.cs" />
     <Compile Include="StepDefinitions\UserAccountCreation.cs" />
     <Compile Include="TestScripts\browserActionn\GenericBrowserAction.cs" />

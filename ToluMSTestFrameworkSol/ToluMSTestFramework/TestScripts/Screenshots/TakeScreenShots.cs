@@ -23,13 +23,8 @@ namespace ToluMSTestFramework.TestScripts.Screenshots
            //Screenshot screenshot = ObjectRepository.driver.TakeScreenshot();
            // screenshot.SaveAsFile("ScreenshotTest.jpeg", ScreenshotImageFormat.Jpeg);
             //This is saved in bin folder 
-
             GeneralclassHelper.TakeAScreenshot();
             GeneralclassHelper.TakeAScreenshot("Screenshooooooot");
-            const string pageTitle = "Your Store";
-            string title = ObjectRepository.driver.Title;
-            Assert.AreEqual(pageTitle,title);
-
         }
         
     }

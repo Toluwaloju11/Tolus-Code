@@ -18,16 +18,16 @@ namespace ToluMSTestFramework.TestScripts.DropDownMenu
         [TestMethod, TestCategory("SELECT A MENU ")]
         public void SelectMenuButton()
         {
-            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
-            IWebElement dropdown = ObjectRepository.driver.FindElement(By.LinkText("Tablets"));
-            dropdown.Click();
-            IWebElement sortdropdown = ObjectRepository.driver.FindElement(By.Id("input-sort"));
-            sortdropdown.Click();
-            //The below is an avalable class used to select
-            SelectElement selectpick = new SelectElement(sortdropdown);
-            selectpick.SelectByIndex(1);
-
-
+    NavigationHelper.NavigateToURL(ObjectRepository.Config.GetDemoHome());
+    IWebElement dropdown = ObjectRepository.driver.FindElement(By.LinkText("Tablets"));
+    dropdown.Click();
+    IWebElement sortdropdown = ObjectRepository.driver.FindElement(By.Id("input-sort"));
+    sortdropdown.Click();
+    //The below is an avalable class used to select
+    SelectElement selectpick = new SelectElement(sortdropdown);
+    selectpick.SelectByIndex(1);
         }
+
     }
+ 
 }

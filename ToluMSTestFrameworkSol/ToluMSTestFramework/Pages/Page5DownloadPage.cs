@@ -5,28 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using ToluMSTestFramework.ComponentHelper;
+using OpenQA.Selenium.Support.PageObjects;
+using ToluMSTestFramework.Settings;
 
 namespace ToluMSTestFramework.PageObjectModel
 {
    public class Page5DownloadPage
    {
         #region Elements
-        private readonly By _downloadLink =
-            By.CssSelector("#content > ul:nth-child(4) > li:nth-child(2) > a");
+        [FindsBy(How = How.LinkText, Using = "Continue")]
+        private IWebElement _continueLink;
         #endregion
+
+        #region CONSTRUCTOR
+
+       public Page5DownloadPage()
+       {
+        OpenQA.Selenium.Support.PageObjects.PageFactory.InitElements(ObjectRepository.driver, this);
+       }
+        #endregion  
 
         #region Actions
         public void DownloadButton()
        {
-           LinkHelper.ClickLink(_downloadLink);
-            //We can now put assertions here eg Page title as we are not returning any other pages
+           _continueLink.Click();   
        }
         #endregion
 
         #region Navigation
        public void NoNavigation()
        {
-           //There is no navigation on this page
+           
        }
         #endregion
     }

@@ -17,18 +17,19 @@ namespace ToluMSTestFramework.POM
         public void RunFirstPOMTest()
         {
             //LONG METHOD
-            //var homePage = new Page1HomePage();
-            //Page2RegisterAccountPage registerAccountPage = homePage.NavigateToRegisterAccount();
-            //Page3UserAccountPage userAccountPage = registerAccountPage.NavigateToUserAccountPage();
-            //Page4UserDetailsPage userDetailsPage = userAccountPage.NavigateToUserDetailsPage();
-            //Page5DownloadPage downloadPage = userDetailsPage.ClickDownloadLink();
+            var homePage = new Page1HomePage();
+            Page2RegisterAccountPage registerAccountPage = homePage.NavigateToRegisterAccount();
+            Page3UserAccountPage userAccountPage = registerAccountPage.NavigateToUserAccountPage();
+            Page4UserDetailsPage userDetailsPage = userAccountPage.NavigateToUserDetailsPage();
+            Page5DownloadPage downloadPage = userDetailsPage.ClickDownloadLink();
 
             //SHORT
-            var homePage = new Page1HomePage();
-            homePage.NavigateToRegisterAccount()
-                .NavigateToUserAccountPage()
-                .NavigateToUserDetailsPage()
-                .ClickDownloadLink().NoNavigation();
+            //var homePage = new Page1HomePage();
+            //homePage.NavigateToRegisterAccount()
+            //    .NavigateToUserAccountPage()
+            //    .NavigateToUserDetailsPage()
+            //    .ClickDownloadLink().NoNavigation();
+            // homePage.NavigateToRegisterAccount();
         }
     }
 }

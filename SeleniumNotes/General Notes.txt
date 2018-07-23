@@ -22,10 +22,18 @@ Configuration classes
   
   MSTest.exe /testcontainer:"C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.dll" /category:TAKE A SCREENSHOT /resultsfile:\C:\Result\MSTest.trx
   .\MSTest.exe /testcontainer:"C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.dll" /category:SELECTBUTTON /resultsfile:C:\Result\MSTest.trx
+  .\MSTest.exe /testcontainer:"C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.dll" /category:SELECTBUTTON /resultsfile:C:\Result
+  
+  DATA DRIVEN
+  The DataSource takes four arguements
+  1. PROVIDERINVARIANTNAME = name of the provider
+  (microsoft.visualstudio.testtools.datasource.csv/EXCEL)
+  2. connectionstring = Location of the external file(Thos is preceded by the '@' sign)
+  3. tableName = Name of dadatable (DATA_TABLE#CSV)
+  4. accessmethod = Order in which the data will be accessed (DATAACCESSMETHOD.sequential/RANDOM)
   
   
   
   
   
   
-    .\MSTest.exe /testcontainer:"C:\Users\Tester\Documents\MySeleniumCode\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\WebDriver.dll" /category:SELECTBUTTON /resultsfile:C:\Result

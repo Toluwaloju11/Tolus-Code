@@ -35,3 +35,5 @@ C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\DataFiles\ExcelTestData.xlsx
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\DataFiles\Login.csv
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\DataFiles\OpenAccount.csv
+C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\Faker.NET4.dll
+C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\bin\Debug\de-DE\Faker.NET4.resources.dll
