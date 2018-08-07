@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 using ToluMSTestFramework.ComponentHelper;
 using ToluMSTestFramework.Settings;
 
@@ -32,7 +33,12 @@ namespace ToluMSTestFramework
             //MenuButtonHelper.SelectMenuButton(By.CssSelector("input[type='radio'][value='1'][name='newsletter']"));
             //RadioButtonHelper.ClickOnOneRadiobutton(By.CssSelector("input[type='checkbox']"));
             //MenuButtonHelper.SelectMenuButton(By.CssSelector("input[type='submit']"));
-            Console.WriteLine(email);
+
+            IWebDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("https://msdn.microsoft.com/en-us/");
+            driver.Manage().Window.Maximize();
+            driver.Close();
+            driver.Quit();
         }
     }
 }

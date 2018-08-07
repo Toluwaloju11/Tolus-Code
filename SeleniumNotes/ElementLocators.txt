@@ -37,5 +37,21 @@ Identifying last child using text
 .classname >ChildTagName:last-child
 .deaultFunc >li:last-child
 
+#top-links > ul > li.dropdown.open > ul > li:nth-child(1) > a
+
+EXPATH DESCENDANTS ACCESS VIEW
+Selecting a the children of an expath
+//form[@attribute='value']/child::*
+Selecting a the children with a tagnme
+//form[@attribute='value']/child::tagname
+SELECTING ALL THE DESCENDANTS 
+//form[@attribute='value']/descendants::*
+SELECTING ALL THE DESCENDANTS OR SELF
+//form[@attribute='value']/descendants-or-self::*
+Selecting A position
+//form[@attribute='value']/child::tagname[position()=1]
+FOLLOWING SIBLING
+
+
 
 
