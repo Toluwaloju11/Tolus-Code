@@ -26,6 +26,7 @@ namespace ToluMSTestFramework.TestScripts.DropDownMenu
     //The below is an avalable class used to select
     SelectElement selectpick = new SelectElement(sortdropdown);
     selectpick.SelectByIndex(1);
+    //selectpick.SelectByText("Text in the dropdown");
         }
 
     }
