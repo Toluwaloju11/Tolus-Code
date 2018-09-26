@@ -31,5 +31,10 @@ namespace ToluMSTestFramework.ComponentHelper
                 || RadioButtonstatus.Equals("checked");
             return false;
         }
+
+        internal static void ClickOnOneRadioButton(By _newsletterYes)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
