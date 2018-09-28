@@ -1,8 +1,9 @@
-1.  Git clone https://github.com/Toluwaloju11/Tolus-Code.git
-2.  ssh-keygen -t rsa -C "toluwaloju11@gmail.com"
-3.  git config —-global user. email “toluwaloju11@gmail.com”
-4.  git remote add origin git@github.com:Toluwaloju11/Tolus-Code.git
+navigae with terminal to the required location
+Git clone https://github.com/Toluwaloju11/Tolus-Code.git
+ssh-keygen -t rsa -C "toluwaloju11@gmail.com"
+add the generated key to github 
+//git config —-global user.email “toluwaloju11@gmail.com”
+//git remote add origin git@github.com:Toluwaloju11/Tolus-Code.git
 
 
-Visualstudio Setup
-Project>Test>UnitTestProject
+
