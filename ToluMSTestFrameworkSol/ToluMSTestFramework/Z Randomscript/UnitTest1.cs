@@ -7,7 +7,7 @@ namespace ToluMSTestFramework.Z_Randomscript
     [TestClass]
     public class UnitTest1 
     {
-        [TestMethod]
+        [TestMethod, TestCategory("ToluTest")]
         public void MyUnitTestone()
         {
             Console.WriteLine("First test");

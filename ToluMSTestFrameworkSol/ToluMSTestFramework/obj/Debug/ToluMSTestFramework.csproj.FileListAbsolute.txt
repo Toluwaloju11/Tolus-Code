@@ -37,3 +37,6 @@ C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.dll
 C:\Users\Tester\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.pdb
+C:\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.csprojResolveAssemblyReference.cache
+C:\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.dll
+C:\Automation\Tolus-Code\ToluMSTestFrameworkSol\ToluMSTestFramework\obj\Debug\ToluMSTestFramework.pdb

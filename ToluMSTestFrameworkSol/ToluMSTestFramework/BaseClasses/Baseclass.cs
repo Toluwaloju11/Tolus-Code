@@ -10,7 +10,7 @@ using ToluMSTestFramework.Settings;
 
 namespace ToluMSTestFramework.BaseClasses
 {
-    [TestClass]
+    [Testclass]
     public class Baseclass{
         private static IWebDriver GetChromeBrowser()
         {

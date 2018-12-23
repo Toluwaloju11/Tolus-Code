@@ -23,7 +23,7 @@ namespace ToluMSTestFramework.Z_Randomscript
         {
             Console.WriteLine("This is the First Method");
         }
-        [TestMethod]
+        [TestMethod, TestCategory("toluuuuu")]
         public void SecondMethod()
         {
             Console.WriteLine("This is the second method");
