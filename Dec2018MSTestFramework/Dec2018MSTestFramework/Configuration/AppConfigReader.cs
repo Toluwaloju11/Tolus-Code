@@ -21,6 +21,11 @@ namespace Dec2018MSTestFramework.Configuration
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Password);
         }
 
+       public string GetWebsite()
+       {
+           return ConfigurationManager.AppSettings.Get(AppConfigKeys.Website);
+       }
+
        public BrowserType GetBrowser()
        {
             string browser = ConfigurationManager.AppSettings.Get(AppConfigKeys.Browser);

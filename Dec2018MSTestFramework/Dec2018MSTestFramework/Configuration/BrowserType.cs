@@ -10,6 +10,7 @@ namespace Dec2018MSTestFramework.Configuration
     {
         Firefox,
         Chrome,
+        ChromeHeadless,
         Explorer,
         Edge
     }

@@ -11,6 +11,7 @@ namespace Dec2018MSTestFramework.Interfaces
    {
        string GetUsername();
        string GetPassword();
+       string GetWebsite();
        BrowserType GetBrowser();
 
     }
