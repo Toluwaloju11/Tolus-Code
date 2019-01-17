@@ -20,25 +20,15 @@ namespace Dec2018MSTestFramework
         public void TestMethod1()
         {
            
-            //MethodBase.GetCurrentMethod().Name;
-            //System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            //ObjectRepository.Driver.TakeScreenshot();
-            //var sortMenu = ObjectRepository.Driver.FindElement(By.Id("input-sort"));
-            //try
-            //{
-            //    NavigationHelper.NavigateToURL(ObjectRepository.Config.GetWebsite());
-            //    LinkHelper.ClickLink(By.LinkText("Desktops"));
-            //    LinkHelper.ClickLink(By.LinkText("Mac (5)"));
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //    GenericHelper.TakeAScreenshot();
-            //    throw;
-            //}
-           var met= MethodBase.GetCurrentMethod();
-            Console.WriteLine(met);
+            NavigationHelper.NavigateToURL(ObjectRepository.Config.GetWebsite());
+            ButtonHelper.ClickButton(By.LinkText("Desktops"));
+            ButtonHelper.ClickButton(By.LinkText("Mac (1)"));
+            DropDownHelper.SelectElementByIndex(By.Id("input-sort"),3);
+            DropDownHelper.SelectElementByIndex(By.Id("input-limit"),3);
+            ButtonHelper.ClickButton(By.CssSelector("#content > div:nth-child(3) > div > div > div:nth-child(2) > div.button-group > button:nth-child(1) > span"));
+            //ButtonHelper.ClickButton(By.LinkText("Add to Cart"));
+            //ButtonHelper.ClickButton(By.LinkText("cart-total"));
 
-        }
+    }
     }
 }

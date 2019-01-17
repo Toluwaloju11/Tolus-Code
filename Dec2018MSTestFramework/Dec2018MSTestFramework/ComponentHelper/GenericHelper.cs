@@ -40,13 +40,11 @@ namespace Dec2018MSTestFramework.ComponentHelper
 
         public static void TakeAScreenshot(string errorShot = "Screenshot")
         {
-            var testName = MethodBase.GetCurrentMethod();
+           // var testName = MethodBase.GetCurrentMethod();
             var screenshot = ObjectRepository.Driver.TakeScreenshot();
             Directory.CreateDirectory("screenshots");
-            errorShot = $"{DateTime.Now:dd.mm.yyyy-HH.mm.ss}.jpeg";
-            screenshot.SaveAsFile("screenshots\\" + testName + ObjectRepository.Driver.Title 
-            //screenshot.SaveAsFile("screenshots\\" + ObjectRepository.Driver.Title 
-                + "--" + errorShot, ScreenshotImageFormat.Jpeg);
+            errorShot = $"{errorShot}-{DateTime.Now:dd.mm.yyyy-HH.mm.ss}.jpeg";
+            screenshot.SaveAsFile("screenshots\\" + errorShot,ScreenshotImageFormat.Jpeg);
         }
     }
 }

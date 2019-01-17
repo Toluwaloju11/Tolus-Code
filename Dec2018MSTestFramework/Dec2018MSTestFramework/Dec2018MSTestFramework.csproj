@@ -88,10 +88,13 @@
     <Compile Include="Configuration\BrowserType.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\MacPage.cs" />
     <Compile Include="SandBox\FindingElements.cs" />
     <Compile Include="SandBox\Navigation\TestNavigation.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="TestScripts\ShopForAMac.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,7 +105,6 @@
   <ItemGroup>
     <Folder Include="Datafiles\" />
     <Folder Include="PageObject\" />
-    <Folder Include="TestScripts\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
